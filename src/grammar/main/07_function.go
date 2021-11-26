@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-study/src/basic/util"
+	"golang-study/src/grammar/util"
 )
 
 // 函数
