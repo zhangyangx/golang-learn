@@ -7,6 +7,7 @@ import (
 
 // json序列化
 // 分别将结构体、map、数组等进行json序列化
+// json反序列化
 func main() {
 	// 将结构体序列化
 	monster := Monster{Name: "🐂", Age: 9000, Birthday: "2021.02.11", Sal: 0, Skill: "fk"}
@@ -34,6 +35,14 @@ func main() {
 		fmt.Println("序列化错误,", err)
 	}
 	fmt.Println("arr结构体序列化后：", string(data))
+
+	// 将json字符串反序列化
+	var bullDemon Monster
+	err = json.Unmarshal([]byte("{\"Name\":\"🐂\",\"Age\":9000,\"Birthday\":\"2021.02.11\",\"Sal\":0,\"Skill\":\"fk\"}"), &bullDemon)
+	if err != nil {
+		fmt.Println("反序列化错误,", err)
+	}
+	fmt.Println(bullDemon)
 }
 
 type Monster struct {
