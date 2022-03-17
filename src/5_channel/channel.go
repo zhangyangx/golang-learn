@@ -32,3 +32,13 @@ func main() {
 	//	fmt.Println(<-chanInt)
 	//}
 }
+
+func MyChannel() {
+	ch := make(chan int)
+	go func() {
+		fmt.Println("hello from goroutine")
+		ch <- 0
+	}()
+	i := <-ch
+	fmt.Println("i:", i)
+}
