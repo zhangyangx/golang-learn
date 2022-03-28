@@ -28,10 +28,10 @@ func test() {
 	// 使用defer+recover，解决万一协程中发生异常，导致程序崩溃的问题
 	defer func() {
 		if err := recover(); err != nil {
-			fmt.Println("test()发生异常")
+			fmt.Println("test()发生异常", err)
 		}
 	}()
-	var myMap map[int]int
+	var myMap = make(map[int]int)
 	myMap[0] = 1
 	for i := 0; i < 10; i++ {
 		fmt.Println("hello world" + strconv.Itoa(i))
