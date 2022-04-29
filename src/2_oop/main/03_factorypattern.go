@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"golang-study/src/2_oop/model"
+	"golang-learn/src/2_oop/model"
 )
 
 // 工厂设计模式

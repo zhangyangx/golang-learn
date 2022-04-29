@@ -1,6 +1,6 @@
 package main
 
-import "golang-study/src/2_oop/model"
+import "golang-learn/src/2_oop/model"
 
 // 封装
 func main() {
